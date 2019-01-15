@@ -31,7 +31,7 @@ https://www.siteguarding.com/en/how-to-get-telegram-bot-api-token
 
 ## How to get chat_id ?
 
-In order to get your ID, you must send your bot any message, go to the https://api.telegram.org/bot{BOT_TOKEN}/getUpdates and copy the ID from the from property `result[0].message.from.id`.
+You must send your bot any message and go to the https://api.telegram.org/bot{BOT_TOKEN}/getUpdates. After you should copy the ID from the from property `result[0].message.from.id`.
 
 ```json
 {
