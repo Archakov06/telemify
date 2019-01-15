@@ -1,0 +1,26 @@
+{
+  "name": "telemify",
+  "version": "1.0.1",
+  "description": "CLI tool to quickly send messages via Telegram messanger.",
+  "license": "MIT",
+  "repository": "Archakov06/telemify",
+  "author": {
+    "name": "Archakov Dennis"
+  },
+  "bin": {
+    "telemify": "index.js",
+    "tlg": "index.js"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "cli",
+    "telegram",
+    "notification",
+    "telemify"
+  ]
+}
