@@ -12,7 +12,9 @@ let options = {
   chat_id: null,
 };
 
-if (process.argv.length > 2) {
+let text = null;
+
+if (process.argv.length >= 2) {
   if (process.argv[2] === 'setup') {
     if (!fs.existsSync(configPath)) {
       fs.mkdirSync(configPath);
@@ -51,15 +53,20 @@ Examples
   text = process.argv[2];
 }
 
-try {
-  options = JSON.parse(fs.readFileSync(configFileName));
-} catch (e) {
-  console.error(`Failed to read config from "${configFileName}"`, e);
+if (!fs.existsSync(configFileName)) {
+  console.error(`Config file not found! Please run: "telemify help"`);
   process.exit(1);
+} else {
+  options = JSON.parse(fs.readFileSync(configFileName));
 }
 
 if (!options.token || !options.chat_id) {
   console.error(`Token or chat_id not defined in config file: "${configFileName}"`);
+  process.exit(1);
+}
+
+if (!text) {
+  console.error(`Enter the message text!`);
   process.exit(1);
 }
 
