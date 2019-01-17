@@ -2,6 +2,8 @@
 
 CLI tool to quickly send messages via Telegram messanger.
 
+![](https://s2.gifyu.com/images/Jan-17-2019-16-04-59.gif)
+
 ## Install
 
 ```bash
